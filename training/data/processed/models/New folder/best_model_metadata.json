@@ -1,0 +1,54 @@
+{
+  "model_name": "XGBoost",
+  "model_type": "XGBClassifier",
+  "model_path": "../data/processed/models\\best_model_xgboost.pkl",
+  "vectorizer_path": "../data/processed/tfidf_vectorizer_full.pkl",
+  "performance_metrics": {
+    "test_accuracy": 0.9266666666666666,
+    "test_precision": 0.9563953488372093,
+    "test_recall": 0.8915989159891599,
+    "test_f1_score": 0.9228611500701263,
+    "test_roc_auc": 0.9843782230473223
+  },
+  "dataset_info": {
+    "total_samples": 10000,
+    "training_samples": 7000,
+    "validation_samples": 1500,
+    "test_samples": 1500,
+    "feature_count": 10015
+  },
+  "feature_info": {
+    "total_samples": 10000,
+    "real_samples": 5079,
+    "fake_samples": 4921,
+    "engineered_features": 15,
+    "tfidf_features": 10000,
+    "total_features": 10015,
+    "feature_names": [
+      "word_count",
+      "char_count",
+      "exclamation_count",
+      "question_count",
+      "caps_count",
+      "caps_ratio",
+      "word_count",
+      "sentence_count",
+      "avg_word_length",
+      "sentiment_compound",
+      "exclamation_count",
+      "question_count",
+      "caps_ratio",
+      "stopword_ratio",
+      "unique_word_ratio"
+    ],
+    "tfidf_params": {
+      "max_features": 10000,
+      "ngram_range": [
+        1,
+        2
+      ],
+      "vocabulary_size": 10000
+    }
+  },
+  "training_timestamp": "2025-06-20 02:58:20"
+}

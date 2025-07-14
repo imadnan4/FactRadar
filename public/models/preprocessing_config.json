@@ -1,0 +1,49 @@
+{
+  "model_info": {
+    "name": "XGBoost",
+    "type": "XGBClassifier",
+    "accuracy": 0.9266666666666666,
+    "f1_score": 0.9228611500701263
+  },
+  "tfidf_params": {
+    "max_features": 10000,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "stop_words": "english",
+    "lowercase": true,
+    "sublinear_tf": true
+  },
+  "feature_engineering": {
+    "numerical_features": [
+      "word_count",
+      "char_count",
+      "exclamation_count",
+      "question_count",
+      "caps_count",
+      "caps_ratio",
+      "word_count",
+      "sentence_count",
+      "avg_word_length",
+      "sentiment_compound",
+      "exclamation_count",
+      "question_count",
+      "caps_ratio",
+      "stopword_ratio",
+      "unique_word_ratio"
+    ],
+    "total_features": 10015
+  },
+  "text_processing": {
+    "steps": [
+      "HTML tag removal",
+      "URL removal",
+      "Punctuation normalization",
+      "Tokenization",
+      "Stopword removal",
+      "Stemming",
+      "TF-IDF vectorization"
+    ]
+  }
+}

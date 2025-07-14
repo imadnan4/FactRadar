@@ -1,0 +1,30 @@
+# Essential packages for FactRadar ML Pipeline
+# Install these core packages without conflicts
+
+# Core Data Science (already installed)
+numpy
+pandas
+
+# Core ML (already installed)
+tensorflow
+
+# Essential ML packages
+scikit-learn
+matplotlib
+seaborn
+nltk
+
+# Jupyter for notebooks
+jupyter
+notebook
+
+# Utilities
+joblib
+tqdm
+
+# Optional (install separately if needed)
+# tensorflowjs
+# xgboost
+# wordcloud
+# scipy
+# plotly

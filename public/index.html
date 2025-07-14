@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FactRadar - Fact Checking using </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Aurora Background -->
+    <div class="aurora-bg">
+        <div class="aurora-layer aurora-1"></div>
+        <div class="aurora-layer aurora-2"></div>
+        <div class="aurora-layer aurora-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="glass-header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-radar-chart"></i>
+                <span>FactRadar</span>
+            </div>
+            <nav class="nav-menu">
+    <a href="#home" class="nav-link active">Home</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#samples" class="nav-link">Samples</a>
+    <a href="#how-it-works" class="nav-link">How It Works</a>
+    <a href="#contact" class="nav-link">Contact</a>
+</nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="home" class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Detect Fake News Instantly</h1>
+                    <p class="hero-subtitle">AI-powered fact-checking for the digital age</p>
+                    
+                    <div class="input-container glass-card">
+                        <textarea 
+                            id="newsInput" 
+                            class="news-input" 
+                            placeholder="Paste your news article here..."
+                            maxlength="2000"
+                        ></textarea>
+                        <div class="input-footer">
+                            <span class="char-counter">0 / 2000</span>
+                            <div class="input-actions">
+                                <button class="btn-secondary" id="trySampleBtn">Try Sample</button>
+                                <button class="btn-secondary" id="clearTextBtn">Clear Text</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary analyze-btn" id="analyzeBtn" disabled>
+                        <span class="btn-text">Analyze News</span>
+                        <div class="btn-loader hidden">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Preview -->
+        <section class="features-section">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card glass-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Real-time Analysis</h3>
+                        <p>Get instant results powered by advanced AI algorithms</p>
+                    </div>
+                    <div class="feature-card glass-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Confidence Scoring</h3>
+                        <p>Detailed confidence metrics for every analysis</p>
+                    </div>
+                    <div class="feature-card glass-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-check"></i>
+                        </div>
+                        <h3>Source Verification</h3>
+                        <p>Cross-reference with trusted news sources</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- About Section -->
+    <section id="about" class="page-section hidden">
+    <div class="container">
+        <div class="page-header">
+            <h1 class="page-title">About FactRadar</h1>
+            <p class="page-subtitle">Understanding AI-powered fact-checking technology</p>
+        </div>
+        
+        <div class="about-content">
+            <div class="mission-card glass-card">
+                <div class="card-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h2>Our Mission</h2>
+                <p>FactRadar is dedicated to combating misinformation by providing accessible, AI-powered fact-checking tools. We believe in empowering users with the technology to verify news and make informed decisions in our digital age.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card glass-card">
+                    <div class="stat-number">94.7%</div>
+                    <div class="stat-label">Accuracy Rate</div>
+                    <div class="stat-description">On verified test datasets</div>
+                </div>
+                <div class="stat-card glass-card">
+                    <div class="stat-number">2.3M+</div>
+                    <div class="stat-label">Articles Analyzed</div>
+                    <div class="stat-description">Since launch</div>
+                </div>
+                <div class="stat-card glass-card">
+                    <div class="stat-number">0.8s</div>
+                    <div class="stat-label">Average Response</div>
+                    <div class="stat-description">Analysis time</div>
+                </div>
+            </div>
+
+            <div class="tech-section">
+                <h2 class="section-subtitle">Technology Stack</h2>
+                <div class="tech-grid">
+                    <div class="tech-card glass-card">
+                        <div class="tech-icon">
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <h3>TensorFlow.js</h3>
+                        <p>Client-side machine learning for real-time analysis</p>
+                    </div>
+                    <div class="tech-card glass-card">
+                        <div class="tech-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Natural Language Processing</h3>
+                        <p>Advanced text analysis and pattern recognition</p>
+                    </div>
+                    <div class="tech-card glass-card">
+                        <div class="tech-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>Neural Networks</h3>
+                        <p>Deep learning models trained on millions of articles</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="limitations-card glass-card">
+                <div class="warning-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <h2>Important Limitations</h2>
+                <ul class="limitations-list">
+                    <li>AI analysis is not 100% accurate and should supplement, not replace, critical thinking</li>
+                    <li>Context and nuance may be missed in automated analysis</li>
+                    <li>Always cross-reference important information with multiple trusted sources</li>
+                    <li>Satirical content may sometimes be misclassified</li>
+                    <li>New misinformation tactics may not be immediately detected</li>
+                </ul>
+                <p class="disclaimer">This tool is designed to assist users in identifying potential misinformation, but human judgment remains essential.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Samples Section -->
+    <section id="samples" class="page-section hidden">
+    <div class="container">
+        <div class="page-header">
+            <h1 class="page-title">Try Sample News</h1>
+            <p class="page-subtitle">Test our AI with different types of content</p>
+        </div>
+        
+        <div class="sample-categories">
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="real">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Real News</span>
+                </button>
+                <button class="category-tab" data-category="fake">
+                    <i class="fas fa-times-circle"></i>
+                    <span>Fake News</span>
+                </button>
+                <button class="category-tab" data-category="satirical">
+                    <i class="fas fa-laugh"></i>
+                    <span>Satirical</span>
+                </button>
+                <button class="category-tab" data-category="mixed">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Mixed Signals</span>
+                </button>
+            </div>
+
+            <!-- Real News Samples -->
+            <div class="category-content active" id="real-category">
+                <div class="samples-grid">
+                    <div class="sample-item glass-card">
+                        <div class="sample-header">
+                            <h3>NASA Climate Research</h3>
+                            <div class="sample-meta">
+                                <span class="source-badge trusted">NASA Official</span>
+                                <span class="date-badge">Dec 2024</span>
+                            </div>
+                        </div>
+                        <p class="sample-preview">Scientists from NASA have released new data showing continued warming trends across global temperature measurements. The comprehensive study, published in the Journal of Climate Science...</p>
+                        <div class="sample-footer">
+                            <div class="sample-stats">
+                                <span class="stat"><i class="fas fa-eye"></i> 2.3K views</span>
+                                <span class="stat"><i class="fas fa-thumbs-up"></i> 94% accuracy</span>
+                            </div>
+                            <button class="btn-sample" data-sample="climate">
+                                <i class="fas fa-play"></i>
+                                Try This Sample
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="sample-item glass-card">
+                        <div class="sample-header">
+                            <h3>MIT Battery Breakthrough</h3>
+                            <div class="sample-meta">
+                                <span class="source-badge trusted">MIT News</span>
+                                <span class="date-badge">Nov 2024</span>
+                            </div>
+                        </div>
+                        <p class="sample-preview">Researchers at MIT have developed a new battery technology that could revolutionize electric vehicle charging times. The breakthrough involves a novel lithium-metal battery design...</p>
+                        <div class="sample-footer">
+                            <div class="sample-stats">
+                                <span class="stat"><i class="fas fa-eye"></i> 1.8K views</span>
+                                <span class="stat"><i class="fas fa-thumbs-up"></i> 96% accuracy</span>
+                            </div>
+                            <button class="btn-sample" data-sample="tech">
+                                <i class="fas fa-play"></i>
+                                Try This Sample
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fake News Samples -->
+            <div class="category-content" id="fake-category">
+                <div class="samples-grid">
+                    <div class="sample-item glass-card">
+                        <div class="sample-header">
+                            <h3>Miracle Cure Discovery</h3>
+                            <div class="sample-meta">
+                                <span class="source-badge questionable">Unknown Blog</span>
+                                <span class="date-badge">Oct 2024</span>
+                            </div>
+                        </div>
+                        <p class="sample-preview">Local doctor discovers simple trick that cures all diseases using this one weird ingredient that pharmaceutical companies don't want you to know about...</p>
+                        <div class="sample-footer">
+                            <div class="sample-stats">
+                                <span class="stat"><i class="fas fa-eye"></i> 892 views</span>
+                                <span class="stat"><i class="fas fa-thumbs-down"></i> 12% credible</span>
+                            </div>
+                            <button class="btn-sample" data-sample="miracle">
+                                <i class="fas fa-play"></i>
+                                Try This Sample
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Satirical Samples -->
+            <div class="category-content" id="satirical-category">
+                <div class="samples-grid">
+                    <div class="sample-item glass-card">
+                        <div class="sample-header">
+                            <h3>Area Man Discovers Internet</h3>
+                            <div class="sample-meta">
+                                <span class="source-badge satirical">The Onion</span>
+                                <span class="date-badge">Dec 2024</span>
+                            </div>
+                        </div>
+                        <p class="sample-preview">Local resident shocked to learn that other people also have opinions, plans to write strongly worded social media posts about it...</p>
+                        <div class="sample-footer">
+                            <div class="sample-stats">
+                                <span class="stat"><i class="fas fa-eye"></i> 5.2K views</span>
+                                <span class="stat"><i class="fas fa-laugh"></i> 98% satirical</span>
+                            </div>
+                            <button class="btn-sample" data-sample="satirical">
+                                <i class="fas fa-play"></i>
+                                Try This Sample
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mixed Signals Samples -->
+            <div class="category-content" id="mixed-category">
+                <div class="samples-grid">
+                    <div class="sample-item glass-card">
+                        <div class="sample-header">
+                            <h3>Social Media Health Claim</h3>
+                            <div class="sample-meta">
+                                <span class="source-badge unknown">Social Media</span>
+                                <span class="date-badge">Nov 2024</span>
+                            </div>
+                        </div>
+                        <p class="sample-preview">Studies show that drinking green tea can boost metabolism by 400%. My friend tried it and lost 20 pounds in a week! Scientists are amazed by these results...</p>
+                        <div class="sample-footer">
+                            <div class="sample-stats">
+                                <span class="stat"><i class="fas fa-eye"></i> 1.1K views</span>
+                                <span class="stat"><i class="fas fa-question"></i> 45% uncertain</span>
+                            </div>
+                            <button class="btn-sample" data-sample="mixed">
+                                <i class="fas fa-play"></i>
+                                Try This Sample
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Results Modal -->
+    <div id="resultsModal" class="modal-overlay hidden">
+        <div class="modal-content glass-card">
+            <button class="modal-close" id="closeModal">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="results-container">
+                <!-- Loading State -->
+                <div id="loadingState" class="loading-state">
+                    <div class="radar-animation">
+                        <div class="radar-circle"></div>
+                        <div class="radar-sweep"></div>
+                    </div>
+                    <h3>Analyzing Article...</h3>
+                    <p class="loading-text">Processing text patterns...</p>
+                </div>
+
+                <!-- Results Display -->
+                <div id="resultsDisplay" class="results-display hidden">
+                    <div class="verdict-card glass-card">
+                        <div class="status-indicator" id="statusIndicator">
+                            <div class="status-circle"></div>
+                        </div>
+                        <h2 class="verdict-text" id="verdictText">ANALYZING...</h2>
+                        <div class="confidence-container">
+                            <span class="confidence-label">Confidence Score</span>
+                            <div class="confidence-bar">
+                                <div class="confidence-fill" id="confidenceFill"></div>
+                            </div>
+                            <span class="confidence-percentage" id="confidencePercentage">0%</span>
+                        </div>
+                    </div>
+
+                    <div class="analysis-details">
+                        <div class="detail-card glass-card">
+                            <h4>Key Indicators</h4>
+                            <div class="indicators-grid">
+                                <div class="indicator">
+                                    <span class="indicator-label">Credibility</span>
+                                    <div class="indicator-meter">
+                                        <div class="meter-fill" id="credibilityMeter"></div>
+                                    </div>
+                                </div>
+                                <div class="indicator">
+                                    <span class="indicator-label">Sentiment</span>
+                                    <span class="sentiment-badge" id="sentimentBadge">Neutral</span>
+                                </div>
+                                <div class="indicator">
+                                    <span class="indicator-label">Readability</span>
+                                    <span class="readability-badge" id="readabilityBadge">Medium</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="explanation-card glass-card">
+                            <h4>Analysis Explanation</h4>
+                            <ul class="explanation-list" id="explanationList">
+                                <li>Analyzing language patterns...</li>
+                            </ul>
+                            <div class="recommendation" id="recommendation">
+                                <strong>Recommendation:</strong> <span>Analysis in progress...</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn-primary" id="tryAnotherBtn">Try Another</button>
+                        <button class="btn-secondary" id="shareResultsBtn">Share Results</button>
+                        <button class="btn-secondary" id="reportIssueBtn">Report Issue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How It Works Page -->
+<section id="how-it-works" class="page-section hidden">
+    <div class="container">
+        <div class="page-header">
+            <h1 class="page-title">How It Works</h1>
+            <p class="page-subtitle">Understanding our AI-powered fact-checking process</p>
+        </div>
+
+        <div class="process-flow">
+            <div class="process-step" data-step="1">
+                <div class="step-animation">
+                    <div class="step-icon">
+                        <i class="fas fa-file-text"></i>
+                    </div>
+                    <div class="step-connector"></div>
+                </div>
+                <div class="step-content">
+                    <h3>Text Input & Processing</h3>
+                    <p>Your article is analyzed for structure, language patterns, and key phrases using advanced natural language processing.</p>
+                    <ul class="step-details">
+                        <li>Tokenization and parsing</li>
+                        <li>Language pattern recognition</li>
+                        <li>Sentiment analysis</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="process-step" data-step="2">
+                <div class="step-animation">
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="step-connector"></div>
+                </div>
+                <div class="step-content">
+                    <h3>Pattern Recognition</h3>
+                    <p>Our neural network identifies suspicious patterns, emotional manipulation tactics, and credibility indicators.</p>
+                    <ul class="step-details">
+                        <li>Misinformation pattern detection</li>
+                        <li>Source credibility assessment</li>
+                        <li>Fact vs. opinion classification</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="process-step" data-step="3">
+                <div class="step-animation">
+                    <div class="step-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="step-connector"></div>
+                </div>
+                <div class="step-content">
+                    <h3>Knowledge Cross-Reference</h3>
+                    <p>The content is compared against our database of verified facts and known misinformation patterns.</p>
+                    <ul class="step-details">
+                        <li>Fact database comparison</li>
+                        <li>Historical misinformation matching</li>
+                        <li>Source reputation analysis</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="process-step" data-step="4">
+                <div class="step-animation">
+                    <div class="step-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <h3>Confidence Scoring</h3>
+                    <p>Multiple algorithms generate a comprehensive reliability score with detailed explanations for the assessment.</p>
+                    <ul class="step-details">
+                        <li>Multi-factor scoring algorithm</li>
+                        <li>Uncertainty quantification</li>
+                        <li>Explanation generation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="accuracy-section">
+            <h2 class="section-subtitle">Model Performance</h2>
+            <div class="performance-grid">
+                <div class="performance-card glass-card">
+                    <div class="performance-chart">
+                        <div class="chart-circle" data-percentage="94.7">
+                            <span class="chart-percentage">94.7%</span>
+                            <span class="chart-label">Overall Accuracy</span>
+                        </div>
+                    </div>
+                    <p>Tested on 50,000+ verified articles</p>
+                </div>
+                <div class="performance-card glass-card">
+                    <div class="performance-chart">
+                        <div class="chart-circle" data-percentage="96.2">
+                            <span class="chart-percentage">96.2%</span>
+                            <span class="chart-label">Real News Detection</span>
+                        </div>
+                    </div>
+                    <p>True positive rate for legitimate news</p>
+                </div>
+                <div class="performance-card glass-card">
+                    <div class="performance-chart">
+                        <div class="chart-circle" data-percentage="92.8">
+                            <span class="chart-percentage">92.8%</span>
+                            <span class="chart-label">Fake News Detection</span>
+                        </div>
+                    </div>
+                    <p>True positive rate for misinformation</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Page -->
+<section id="contact" class="page-section hidden">
+    <div class="container">
+        <div class="page-header">
+            <h1 class="page-title">Contact Us</h1>
+            <p class="page-subtitle">Get in touch with the FactRadar team</p>
+        </div>
+
+        <div class="contact-content">
+            <div class="contact-form-section">
+                <div class="contact-form glass-card">
+                    <h2>Send us a message</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Name</label>
+                            <input type="text" id="contactName" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email</label>
+                            <input type="email" id="contactEmail" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject">Subject</label>
+                            <select id="contactSubject" name="subject" required>
+                                <option value="">Select a topic</option>
+                                <option value="bug">Bug Report</option>
+                                <option value="feature">Feature Request</option>
+                                <option value="accuracy">Accuracy Issue</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message</label>
+                            <textarea id="contactMessage" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="contact-info-section">
+                <div class="contact-info glass-card">
+                    <h2>Other ways to reach us</h2>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4>Email Support</h4>
+                                <p>support@factradar.ai</p>
+                                <span class="response-time">Response within 24 hours</span>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4>Twitter</h4>
+                                <p>@FactRadarAI</p>
+                                <span class="response-time">Follow for updates</span>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4>GitHub</h4>
+                                <p>github.com/factradar</p>
+                                <span class="response-time">Open source contributions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-section glass-card">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>How accurate is FactRadar?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>FactRadar achieves 94.7% accuracy on verified test datasets, but should always be used alongside critical thinking and source verification.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>Is my data stored or shared?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>No, all analysis happens locally in your browser. We don't store or share the content you analyze.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>Can I use FactRadar for commercial purposes?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Please contact us for commercial licensing options and API access.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="glass-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-radar-chart"></i>
+                        <span>FactRadar</span>
+                    </div>
+                    <p>AI-powered fact-checking for the digital age</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#samples">Samples</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FactRadar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

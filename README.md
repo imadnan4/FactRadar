@@ -56,23 +56,29 @@ FactRadar/
 │   └── globals.css
 
 ├── 📁 training/                   # Model training infrastructure
-│   └──📁 data/
-│       └── 📁 processed/
-│           ├── feature_summary.json
-│           ├── fully_processed_dataset.csv
-│           ├── real_dataset_processed.csv
-│           ├── tfidf_vectorizer_full.pkl
-│           └── 📁 models/
-│               ├── best_model_gradient_boosting.pkl
-│               ├── best_model_metadata.json
-│               ├── cnn_model.h5
-│               ├── keras_tokenizer.pkl
-│               ├── lstm_model.h5
-│               └── 📁 version 2/
-│  └── 📁 notebooks/
-│       ├─ data_exploration.ipynb
-│       ├── model_training.ipynb
-│       └── preprocessing.ipynb
+│   ├── 📁 data/
+│   │   ├── 📁 processed/
+│   │   │   ├── feature_summary.json
+│   │   │   ├── fully_processed_dataset.csv
+│   │   │   ├── real_dataset_processed.csv
+│   │   │   ├── tfidf_vectorizer_full.pkl
+│   │   │   └── 📁 models/
+│   │   │       ├── best_model_gradient_boosting.pkl
+│   │   │       ├── best_model_metadata.json
+│   │   │       ├── cnn_model.h5
+│   │   │       ├── keras_tokenizer.pkl
+│   │   │       ├── lstm_model.h5
+│   │   │       └── 📁 version 2/
+│   │   └── 📁 raw/
+│   ├── 📁 notebooks/
+│   │   ├── data_exploration.ipynb
+│   │   ├── model_training.ipynb
+│   │   └── preprocessing.ipynb
+│   └── 📁 scripts/
+│       ├── load_real_datasets.py
+│       ├── quick_data_check.py
+│       ├── setup_project.py
+│       └── test_notebook_fix.py
 ├── 📄 .env.example                # Environment variables template
 ├── 📄 .gitignore                  # Git ignore rules
 ├── 📄 CHANGELOG.md                # Version history

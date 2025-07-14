@@ -118,8 +118,20 @@ jspm_packages/
 tmp/
 temp/
 
-# Large model files (uncomment if needed)
-# backend/models/*.pkl
-# backend/models/*.h5
-# training/data/processed/*.pkl
-# training/data/processed/*.csv
+# Large model files and datasets
+*.h5
+*.pkl
+*.joblib
+*.bin
+*.csv
+Demo.mp4
+fake-and-real-news-dataset/
+training/data/processed/New folder/
+training/data/processed/version 2/
+training/data/processed/fully_processed_dataset.csv
+training/data/processed/real_dataset_processed.csv
+training/data/processed/tfidf_vectorizer_full.pkl
+backend/models/
+backend/old/
+training/data/processed/models/New folder/
+training/data/processed/models/version 2/

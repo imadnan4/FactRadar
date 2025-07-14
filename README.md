@@ -9,12 +9,9 @@ FactRadar/
 ├── 📁 app/                          # Next.js app directory
 │   ├── globals.css                 # Global styles
 │   ├── layout.tsx                  # Root layout
-│   ├── page.tsx                    # Main application page
-│   └── page.tsx.backup             # Backup of original page
+│   └── page.tsx                    # Main application page
 ├── 📁 backend/                     # Python Flask backend
 │   ├── app.py                      # Main Flask application
-│   ├── app.py.backup               # Backup of original app.py
-│   ├── test.py                     # Backend testing utilities
 │   ├── requirements.txt            # Python dependencies
 │   ├── 📁 models/                  # ML models directory
 │   │   ├── best_model_gradient_boosting.pkl
@@ -57,9 +54,7 @@ FactRadar/
 │   └── utils.js
 ├── 📁 styles/                     # Additional styles
 │   └── globals.css
-├── 📁 tests/                      # Test files
-│   ├── test_model.js
-│   └── test_preprocessing.js
+
 ├── 📁 training/                   # Model training infrastructure
 │   └──📁 data/
 │       └── 📁 processed/
@@ -229,7 +224,6 @@ npm run lint         # Run ESLint
 **Backend:**
 ```bash
 python app.py        # Start Flask server
-python test.py       # Run backend tests
 ```
 
 ### Environment Variables

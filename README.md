@@ -22,62 +22,12 @@ FactRadar/
 │   │   ├── cnn_model.h5
 │   │   ├── lstm_model.h5
 │   │   └── tfidf_vectorizer_full.pkl
-│   └── 📁 old/                     # Legacy model backups
 ├── 📁 components/                  # React components
 │   ├── FakeNewsDetector.tsx        # Main detection component
 │   ├── theme-provider.tsx          # Theme management
 │   ├── theme-switcher.tsx          # Theme toggle component
 │   ├── theme-toggle.tsx            # Alternative theme toggle
 │   └── 📁 ui/                      # Shadcn/ui components
-│       ├── accordion.tsx
-│       ├── alert-dialog.tsx
-│       ├── alert.tsx
-│       ├── aspect-ratio.tsx
-│       ├── avatar.tsx
-│       ├── badge.tsx
-│       ├── breadcrumb.tsx
-│       ├── button.tsx
-│       ├── calendar.tsx
-│       ├── card.tsx
-│       ├── carousel.tsx
-│       ├── chart.tsx
-│       ├── checkbox.tsx
-│       ├── collapsible.tsx
-│       ├── command.tsx
-│       ├── context-menu.tsx
-│       ├── dialog.tsx
-│       ├── drawer.tsx
-│       ├── dropdown-menu.tsx
-│       ├── form.tsx
-│       ├── hover-card.tsx
-│       ├── input-otp.tsx
-│       ├── input.tsx
-│       ├── label.tsx
-│       ├── menubar.tsx
-│       ├── navigation-menu.tsx
-│       ├── popover.tsx
-│       ├── progress.tsx
-│       ├── radio-group.tsx
-│       ├── resizable.tsx
-│       ├── scroll-area.tsx
-│       ├── select.tsx
-│       ├── separator.tsx
-│       ├── sheet.tsx
-│       ├── sidebar.tsx
-│       ├── skeleton.tsx
-│       ├── slider.tsx
-│       ├── sonner.tsx
-│       ├── switch.tsx
-│       ├── table.tsx
-│       ├── tabs.tsx
-│       ├── textarea.tsx
-│       ├── toast.tsx
-│       ├── toaster.tsx
-│       ├── toggle-group.tsx
-│       ├── toggle.tsx
-│       ├── tooltip.tsx
-│       ├── use-mobile.tsx
-│       └── use-toast.ts
 ├── 📁 fake-and-real-news-dataset/   # Training datasets
 │   ├── Fake.csv
 │   └── True.csv
@@ -85,11 +35,6 @@ FactRadar/
 │   ├── use-mobile.tsx
 │   ├── use-toast.ts
 │   └── useFactCheck.ts             # Main fact-checking hook
-├── 📁 liar_dataset/               # LIAR dataset
-│   ├── README
-│   ├── test.tsv
-│   ├── train.tsv
-│   └── valid.tsv
 ├── 📁 lib/                        # Utility libraries
 │   ├── formatReasoning.tsx        # Reasoning formatting utilities
 │   ├── openrouter.ts              # OpenRouter API client
@@ -105,12 +50,7 @@ FactRadar/
 │   ├── style.css
 │   └── 📁 models/                 # Frontend ML models
 │       ├── preprocessing_config.json
-│       ├── vocabulary.json
-│       └── 📁 tfjs_model/
-│           ├── group1-shard1of3.bin
-│           ├── group1-shard2of3.bin
-│           ├── group1-shard3of3.bin
-│           └── model.json
+│       └──  vocabulary.json
 ├── 📁 src/                        # Source files
 │   ├── prediction.js
 │   ├── preprocessing.js
@@ -121,50 +61,35 @@ FactRadar/
 │   ├── test_model.js
 │   └── test_preprocessing.js
 ├── 📁 training/                   # Model training infrastructure
-│   ├── 📁 data/
-│   │   ├── 📁 processed/
-│   │   │   ├── feature_summary.json
-│   │   │   ├── fully_processed_dataset.csv
-│   │   │   ├── real_dataset_processed.csv
-│   │   │   ├── tfidf_vectorizer_full.pkl
-│   │   │   └── 📁 models/
-│   │   │       ├── best_model_gradient_boosting.pkl
-│   │   │       ├── best_model_metadata.json
-│   │   │       ├── cnn_model.h5
-│   │   │       ├── keras_tokenizer.pkl
-│   │   │       ├── lstm_model.h5
-│   │   │       └── 📁 version 2/
-│   │   ├── 📁 raw/
-│   │   └── 📁 New folder/
-│   ├── 📁 notebooks/
-│   │   ├── data_exploration.ipynb
-│   │   ├── model_training.ipynb
-│   │   └── preprocessing.ipynb
-│   └── 📁 scripts/
-│       ├── load_real_datasets.py
-│       └── quick_data_check.py
+│   └──📁 data/
+│       └── 📁 processed/
+│           ├── feature_summary.json
+│           ├── fully_processed_dataset.csv
+│           ├── real_dataset_processed.csv
+│           ├── tfidf_vectorizer_full.pkl
+│           └── 📁 models/
+│               ├── best_model_gradient_boosting.pkl
+│               ├── best_model_metadata.json
+│               ├── cnn_model.h5
+│               ├── keras_tokenizer.pkl
+│               ├── lstm_model.h5
+│               └── 📁 version 2/
+│  └── 📁 notebooks/
+│       ├─ data_exploration.ipynb
+│       ├── model_training.ipynb
+│       └── preprocessing.ipynb
 ├── 📄 .env.example                # Environment variables template
-├── 📄 .env.local                  # Local environment variables
 ├── 📄 .gitignore                  # Git ignore rules
 ├── 📄 CHANGELOG.md                # Version history
 ├── 📄 components.json             # Shadcn/ui configuration
-├── 📄 DEVELOPMENT_STATUS.md       # Development progress
-├── 📄 INSTALL_GUIDE.md            # Installation instructions
-├── 📄 INSTALL_GUIDE.md            # Installation instructions
-├── 📄 MODEL_SELECTION_FEATURE.md  # Model selection documentation
 ├── 📄 README.md                   # This file
-├── 📄 best_model_metadata.json    # Model metadata
 ├── 📄 netlify.toml                # Netlify deployment config
 ├── 📄 next.config.mjs             # Next.js configuration
 ├── 📄 package.json                # Frontend dependencies
-├── 📄 plan.md                     # Project planning
 ├── 📄 pnpm-lock.yaml              # Package lock file
 ├── 📄 postcss.config.mjs          # PostCSS configuration
-├── 📄 presentation.md             # Project presentation
 ├── 📄 requirements.txt            # Python dependencies
-├── 📄 start-backend.bat           # Windows batch file to start backend
 ├── 📄 tailwind.config.ts          # Tailwind CSS configuration
-├── 📄 test-model.js               # Model testing script
 └── 📄 tsconfig.json               # TypeScript configuration
 ```
 

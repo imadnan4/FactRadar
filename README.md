@@ -180,6 +180,10 @@ FactRadar/
 - **Modern UI**: Clean, responsive interface with glass-morphism design elements
 - **Privacy-First**: Analysis happens directly in your browser
 
+## 🎥 Demo
+
+Check out the live demo on X (formerly Twitter): [FactRadar Demo](https://x.com/adnankhaan_ai/status/1944727079981052218)
+
 ## 🚀 Getting Started
 
 ### Prerequisites
